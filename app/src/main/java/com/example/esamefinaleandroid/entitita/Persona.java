@@ -95,6 +95,18 @@ public class Persona implements Parcelable {
         this.sesso = sesso;
     }
 
+    public Citta getCitta() {
+        return citta;
+    }
+
+    public void setCitta(Citta citta) {
+        this.citta = citta;
+    }
+
+    public static Creator<Persona> getCREATOR() {
+        return CREATOR;
+    }
+
     @Override
     public int describeContents() {
         return 0;

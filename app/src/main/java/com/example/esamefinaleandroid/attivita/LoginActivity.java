@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.esamefinaleandroid.R;
 import com.example.esamefinaleandroid.entitita.Account;
@@ -33,15 +34,28 @@ public class LoginActivity extends AppCompatActivity {
 
     public void launchLoginActivity(View view) {
         Log.d(LOG_TAG, "Button LOGIN clicked!");
-        for (Account account: listaUtentiPresenti)
-            if (mEditTextUsername.getText().toString().equals(account.getUsername())) {
-                if (mEditTextPassword.getText().toString().equals(account.getPassword())) {
-                    Intent intent = new Intent(this, MainActivity.class);
-                    intent.putExtra(EXTRA_MESSAGE, account);
-                    //TODO passare oggetto account verso Main Activity
-                    startActivity(intent);
+        for (Account account : listaUtentiPresenti)
+            if (!listaUtentiPresenti.isEmpty()) {
+                Log.d(LOG_TAG, "Nella lista è presente almeno un utente registrato");
+                if ((!listaUtentiPresenti.isEmpty()) && mEditTextUsername.getText().toString().equals(account.getUsername())) {
+                    Log.d(LOG_TAG, "Controllata la presenza dell'utente tramite USERNAME!");
+                    if (mEditTextPassword.getText().toString().equals(account.getPassword())) {
+                        Log.d(LOG_TAG, "Controllata la correttezza della PASSWORD inserita");
+                        Intent intent = new Intent(this, MainActivity.class);
+                        intent.putExtra(EXTRA_MESSAGE, account);
+                        Log.d(LOG_TAG, "Passato l'oggetto ACCOUNT all'Activity Main");
+                        startActivity(intent);
+                    }
+                } else {
+                    Log.d(LOG_TAG, "Utente non presente!");
+                    Toast toast = Toast.makeText(this, "Username o Password errati !", Toast.LENGTH_SHORT);
+                    toast.show();
                 }
-            } else Log.d(LOG_TAG, "Utente non presente!");
+            } else {
+                Log.d(LOG_TAG, "Nessun Utente registrato!");
+                Toast toast = Toast.makeText(this, "Campo Username non presente a sistema!", Toast.LENGTH_SHORT);
+                toast.show();
+            }
     }
 
     public void launchRegisterActivity(View view) {

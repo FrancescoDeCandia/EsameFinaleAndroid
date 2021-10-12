@@ -8,13 +8,36 @@
     tools:context=".attivita.MainActivity">
 
   <TextView
-      android:id="@+id/textViewNomeCognome"
+      android:id="@+id/textViewNome"
       android:layout_width="333dp"
       android:layout_height="57dp"
       android:layout_alignParentTop="true"
       android:layout_centerHorizontal="true"
-      android:layout_marginTop="51dp"
+      android:layout_marginTop="34dp"
       android:onClick="launchUserDetailsActivity"
+      android:clickable="true"
+      android:textAlignment="center"
+      android:textAllCaps="false"
+      android:textSize="34sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.056" />
+
+  <TextView
+      android:id="@+id/textViewCognome"
+      android:layout_width="333dp"
+      android:layout_height="57dp"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="95dp"
+      android:onClick="launchUserDetailsActivity"
+      android:clickable="true"
+      android:textAlignment="center"
+      android:textSize="34sp"
+      android:textStyle="bold"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +65,7 @@
       android:layout_centerHorizontal="true"
       android:layout_marginStart="93dp"
       android:layout_marginBottom="45dp"
-      android:onClick="launchAddProductssActivity"
+      android:onClick="launchAddProductsActivity"
       android:text="Aggiungi Prodotto" />
 
   <TextView
