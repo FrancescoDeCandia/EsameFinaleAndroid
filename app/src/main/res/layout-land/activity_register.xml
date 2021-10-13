@@ -97,7 +97,7 @@
 
             <RadioButton
                 android:id="@+id/radioFemmina"
-                android:layout_width="wrap_content"
+                android:layout_width="108dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/verdeScuro"
                 android:text="F" />

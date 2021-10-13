@@ -1,5 +1,6 @@
 package com.example.esamefinaleandroid.attivita;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -20,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mEditTextPassword;
     private static final String LOG_TAG = LoginActivity.class.getSimpleName();
     public static final int TEXT_REQUEST = 1;
+    private Account account;
     private ArrayList<Account> listaUtentiPresenti = new ArrayList<>();
     public static final String EXTRA_MESSAGE = "com.example.esamefinaleandroid.extra.MESSAGE";
 
@@ -29,6 +31,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mEditTextUsername = findViewById(R.id.editTextUsername);
         mEditTextPassword = findViewById(R.id.editTextPassword);
+
+        if(savedInstanceState != null) {
+            account = savedInstanceState.getParcelable("account");
+        }
 
     }
 
@@ -74,6 +80,14 @@ public class LoginActivity extends AppCompatActivity {
                 toast.show();
                 listaUtentiPresenti.add(reply);
             }
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if(account!= null){
+            outState.putParcelable("account", account);
         }
     }
 

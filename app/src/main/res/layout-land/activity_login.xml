@@ -15,6 +15,7 @@
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
+
         android:textAlignment="center"
         android:textColor="@color/verdeScuro"
         android:textSize="24sp"

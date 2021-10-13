@@ -48,6 +48,24 @@ public class MainActivity extends AppCompatActivity {
         String nomeCognome =  (accountLoggato.getPersona().getNome() + " " + accountLoggato.getPersona().getCognome());
         mTextViewNomeCognome.setText(nomeCognome);
 
+        if (savedInstanceState != null) {
+            boolean isVisible = savedInstanceState.getBoolean("reply_visible");
+            if (isVisible) {
+                mReplyTextView1.setText(savedInstanceState.getString("reply_text1"));
+                mReplyTextView2.setText(savedInstanceState.getString("reply_text2"));
+                mReplyTextView3.setText(savedInstanceState.getString("reply_text3"));
+                mReplyTextView4.setText(savedInstanceState.getString("reply_text4"));
+                mReplyTextView5.setText(savedInstanceState.getString("reply_text5"));
+                mReplyTextView6.setText(savedInstanceState.getString("reply_text6"));
+                mReplyTextView1.setVisibility(View.VISIBLE);
+                mReplyTextView2.setVisibility(View.VISIBLE);
+                mReplyTextView3.setVisibility(View.VISIBLE);
+                mReplyTextView4.setVisibility(View.VISIBLE);
+                mReplyTextView5.setVisibility(View.VISIBLE);
+                mReplyTextView6.setVisibility(View.VISIBLE);
+            }
+        }
+
     }
 
     public void launchUserDetailsActivity(View view) {
@@ -94,6 +112,20 @@ public class MainActivity extends AppCompatActivity {
                     mReplyTextView6.setText(reply);
                 } else Log.d(LOG_TAG, "Non puoi più aggiungere altri items!");
             }
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (mReplyTextView1.getVisibility() == View.VISIBLE) {
+            outState.putBoolean("reply_visible", true);
+            outState.putString("reply_text1", mReplyTextView1.getText().toString());
+            outState.putString("reply_text2", mReplyTextView2.getText().toString());
+            outState.putString("reply_text3", mReplyTextView3.getText().toString());
+            outState.putString("reply_text4", mReplyTextView4.getText().toString());
+            outState.putString("reply_text5", mReplyTextView5.getText().toString());
+            outState.putString("reply_text6", mReplyTextView6.getText().toString());
         }
     }
 }
