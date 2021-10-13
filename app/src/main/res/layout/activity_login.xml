@@ -4,61 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verdeChiaro"
     tools:context=".attivita.LoginActivity">
 
     <EditText
         android:id="@+id/editTextUsername"
-        android:layout_width="290dp"
-        android:layout_height="46dp"
+        android:layout_width="322dp"
+        android:layout_height="73dp"
+        android:backgroundTint="@color/verdeScuro"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColor="@color/verdeScuro"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.248" />
+        app:layout_constraintVertical_bias="0.22" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginButton"
-        android:layout_width="179dp"
-        android:layout_height="53dp"
-        android:text="Login"
+        android:layout_width="322dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/verdeScuro"
         android:onClick="launchLoginActivity"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registerButton"
-        android:layout_width="267dp"
-        android:layout_height="88dp"
-        android:text="Registrazione"
+        android:layout_width="322dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/verdeScuro"
         android:onClick="launchRegisterActivity"
+        android:text="Registrazione"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858" />
+        app:layout_constraintVertical_bias="0.757" />
 
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="290dp"
-        android:layout_height="46dp"
+        android:layout_width="322dp"
+        android:layout_height="73dp"
+        android:backgroundTint="@color/verdeScuro"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:textAlignment="center"
+        android:textColor="@color/verdeScuro"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+        app:layout_constraintVertical_bias="0.349" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nuovo Utente ? Registrati qui!"
+        android:textAlignment="center"
+        android:textColor="@color/verdeScuro"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.671" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

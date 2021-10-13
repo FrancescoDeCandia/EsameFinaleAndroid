@@ -60,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         Persona persona1 = new Persona(mTextViewNome.getText().toString(),
                                         mTextViewCognome.getText().toString(),
-                                        Integer.getInteger(mTextViewEta.getText().toString()),
+                                        Integer.valueOf(mTextViewEta.getText().toString()),
                                         mTextViewTelefono.getText().toString(), value.charAt(0), citta1);
 
         Account user1 = new Account(mTextViewUsername.getText().toString(),

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">EsameFinaleAndroid</string>
+    <string name="button1">Cheese</string>
+    <string name="button2">Rice</string>
+    <string name="button3">Apples</string>
+    <string name="button4">Milk</string>
+    <string name="button5">Bread</string>
+    <string name="button6">Fish</string>
 
 </resources>

@@ -40,8 +40,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "Setto gli attributi della PERSONA a video");
         dNome.setText(accountLoggato.getPersona().getNome());
         dCognome.setText(accountLoggato.getPersona().getCognome());
-        //TODO gettare l'integer dall'età (valore nullo)
-//        dEta.setText(accountLoggato.getPersona().getEta().toString());
+        dEta.setText(accountLoggato.getPersona().getEta().toString());
         dTelefono.setText(accountLoggato.getPersona().getTelefono());
         dSesso.setText(accountLoggato.getPersona().getSesso().toString());
         dCitta.setText(accountLoggato.getPersona().getCitta().getNome());
