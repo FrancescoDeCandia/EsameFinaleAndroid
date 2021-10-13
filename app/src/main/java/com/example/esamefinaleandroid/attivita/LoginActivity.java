@@ -70,6 +70,8 @@ public class LoginActivity extends AppCompatActivity {
         if (requestCode == TEXT_REQUEST) {
             if (resultCode == RESULT_OK) {
                 Account reply = data.getParcelableExtra(RegisterActivity.EXTRA_REPLY);
+                Toast toast = Toast.makeText(this, "Utente Registrato correttamente !", Toast.LENGTH_SHORT);
+                toast.show();
                 listaUtentiPresenti.add(reply);
             }
         }

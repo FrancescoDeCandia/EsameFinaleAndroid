@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.esamefinaleandroid.R;
 import com.example.esamefinaleandroid.entitita.Account;
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         mReplyTextView5 = findViewById(R.id.show_item5);
         mReplyTextView6 = findViewById(R.id.show_item6);
 
+        Toast toast = Toast.makeText(this, "Login effettuato correttamente !", Toast.LENGTH_SHORT);
+        toast.show();
         Intent intent = getIntent();
         accountLoggato = intent.getParcelableExtra(LoginActivity.EXTRA_MESSAGE);
         String nomeCognome =  (accountLoggato.getPersona().getNome() + " " + accountLoggato.getPersona().getCognome());
@@ -67,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == TEXT_REQUEST) {
             if (resultCode == RESULT_OK) {
                 String reply = data.getStringExtra(AddProductsActivity.EXTRA_REPLY);
+
+                Toast toast = Toast.makeText(this, "Prodotto correttamente !", Toast.LENGTH_SHORT);
+                toast.show();
 
                 if (mReplyTextView1.getText().toString().isEmpty()) {
                     mReplyTextView1.setVisibility(View.VISIBLE);
