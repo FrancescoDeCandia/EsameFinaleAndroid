@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         mEditTextUsername = findViewById(R.id.editTextUsername);
         mEditTextPassword = findViewById(R.id.editTextPassword);
 
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             account = savedInstanceState.getParcelable("account");
         }
 
@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        if(account!= null){
+        if (account != null) {
             outState.putParcelable("account", account);
         }
     }

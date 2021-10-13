@@ -67,7 +67,7 @@ public class AddProductsActivity extends AppCompatActivity {
                 throw new RuntimeException("Unknow button ID");
         }
 
-        setResult(RESULT_OK,replyIntent);
+        setResult(RESULT_OK, replyIntent);
         finish();
     }
 }

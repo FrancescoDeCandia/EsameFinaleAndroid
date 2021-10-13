@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import com.example.esamefinaleandroid.R;
 import com.example.esamefinaleandroid.entitita.Account;
@@ -17,7 +16,7 @@ import com.example.esamefinaleandroid.entitita.Citta;
 import com.example.esamefinaleandroid.entitita.Persona;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -53,25 +52,25 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void creaAccount(View view) {
 
-        final String value = ((RadioButton)findViewById(mRadioButtonSesso.getCheckedRadioButtonId())).getText().toString();
+        final String value = ((RadioButton) findViewById(mRadioButtonSesso.getCheckedRadioButtonId())).getText().toString();
 
         Citta citta1 = new Citta(mTextViewCitta.getText().toString(),
-                                mTextViewProvincia.getText().toString());
+                mTextViewProvincia.getText().toString());
 
         Persona persona1 = new Persona(mTextViewNome.getText().toString(),
-                                        mTextViewCognome.getText().toString(),
-                                        Integer.valueOf(mTextViewEta.getText().toString()),
-                                        mTextViewTelefono.getText().toString(), value.charAt(0), citta1);
+                mTextViewCognome.getText().toString(),
+                Integer.valueOf(mTextViewEta.getText().toString()),
+                mTextViewTelefono.getText().toString(), value.charAt(0), citta1);
 
         Account user1 = new Account(mTextViewUsername.getText().toString(),
-                                    mTextViewPassword.getText().toString(),
-                                    persona1);
+                mTextViewPassword.getText().toString(),
+                persona1);
 
         accountList.add(user1);
         Log.d(LOG_TAG, "Account REGISTRATO con successo!");
         Intent replyIntent = new Intent();
         replyIntent.putExtra(EXTRA_REPLY, user1);
-        setResult(RESULT_OK,replyIntent);
+        setResult(RESULT_OK, replyIntent);
         finish();
 
     }

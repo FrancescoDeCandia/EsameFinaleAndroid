@@ -34,121 +34,121 @@
             android:gravity="center_vertical"
             android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/registerNome"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/verdeScuro"
-        android:ems="10"
-        android:hint="Nome"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/registerCognome"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/verdeScuro"
-        android:ems="10"
-        android:hint="Cognome"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/registerEta"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/verdeScuro"
-        android:ems="10"
-        android:hint="Età"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/registerTelefono"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/verdeScuro"
-        android:ems="10"
-        android:hint="Telefono"
-        android:inputType="textPersonName" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="98dp"
-            android:layout_height="38dp"
-            android:layout_marginLeft="6dp"
-            android:text="Sesso"
-            android:textSize="22sp"></TextView>
-
-        <RadioGroup
-            android:id="@+id/registerSesso"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radioMaschio"
-                android:layout_width="108dp"
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/registerNome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:backgroundTint="@color/verdeScuro"
-                android:text="M" />
+                android:ems="10"
+                android:hint="Nome"
+                android:inputType="textPersonName" />
 
-            <RadioButton
-                android:id="@+id/radioFemmina"
-                android:layout_width="108dp"
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/registerCognome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:backgroundTint="@color/verdeScuro"
-                android:text="F" />
+                android:ems="10"
+                android:hint="Cognome"
+                android:inputType="textPersonName" />
 
-        </RadioGroup>
+            <EditText
+                android:id="@+id/registerEta"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/verdeScuro"
+                android:ems="10"
+                android:hint="Età"
+                android:inputType="textPersonName" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/registerTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/verdeScuro"
+                android:ems="10"
+                android:hint="Telefono"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/registerCitta"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/verdeScuro"
-        android:ems="10"
-        android:hint="Città"
-        android:inputType="textPersonName" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/registerProvincia"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/verdeScuro"
-        android:ems="10"
-        android:hint="Provincia"
-        android:inputType="textPersonName" />
+                <TextView
+                    android:layout_width="98dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="6dp"
+                    android:text="Sesso"
+                    android:textSize="22sp"></TextView>
 
-    <EditText
-        android:id="@+id/registerUsername"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/verdeScuro"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName" />
+                <RadioGroup
+                    android:id="@+id/registerSesso"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/registerPassword"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/verdeScuro"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+                    <RadioButton
+                        android:id="@+id/radioMaschio"
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/verdeScuro"
+                        android:text="M" />
 
-    <Button
-        android:id="@+id/creaAccountButton"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:onClick="creaAccount"
-        android:text="Crea Account"
-        android:textSize="20sp" />
+                    <RadioButton
+                        android:id="@+id/radioFemmina"
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/verdeScuro"
+                        android:text="F" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/registerCitta"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/verdeScuro"
+                android:ems="10"
+                android:hint="Città"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/registerProvincia"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/verdeScuro"
+                android:ems="10"
+                android:hint="Provincia"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/registerUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/verdeScuro"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/verdeScuro"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/creaAccountButton"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:onClick="creaAccount"
+                android:text="Crea Account"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>
